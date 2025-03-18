@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated CV</title>
+    <link rel="stylesheet" href="CVstyles.css"> 
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('skills')">Skills</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </div>
+    
+    <div class="container show" id="about">
+        <img src="C:\Users\Calo\Desktop\HTML\download.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>TJ D. Calo</h1>
+        <p>Web Developer | Designer | Programmer</p>
+    </div>
+    
+    <div class="container" id="skills">
+        <h1>Skills</h1>
+        <p>HTML: Beginner <br> CSS: Beginner <br> JavaScript: Beginner</p>
+    </div>
+    
+    <div class="container" id="contact">
+        <h1>Contact</h1>
+        <p>Email: tjcalo6@gmail.com<br> Contact Number: 09057940524 <br> Facebook: TJ Calo</p>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 TJ D. Calo. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.container').forEach(section => {
+                section.style.display = 'none';
+                section.classList.remove('show');
+            });
+            
+            let activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+            setTimeout(() => {
+                activeSection.classList.add('show');
+            }, 10);
+        }
+    </script>
+</body>
+</html>
+
